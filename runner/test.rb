@@ -69,6 +69,10 @@ begin
 
   puts "End!"
 rescue => e
+  Transaction.all.destroy
+  Wallet.all.destroy
+  Block.all.destroy
+
   puts e
   puts e.backtrace
 end
