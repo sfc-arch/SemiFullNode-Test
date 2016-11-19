@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>現在マイニング中のブロックのデータ↓</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ブロックのハッシュ</th>
+    <th>ブロック番号</th>
+    <th>被利用率</th>
+    <th>削除可能？</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @block_infos.each do |blockinfo| %>
+      <%= sync partial: 'blockinfo_row', resource: blockinfo %>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

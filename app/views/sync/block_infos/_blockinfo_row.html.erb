@@ -1,0 +1,6 @@
+<tr class="<%= block_info.deletable? ? 'deletable' : 'non-deletable' %>">
+  <td><%= block_info.merkle_root_hash %></td>
+  <td><%= block_info.height %></td>
+  <td><%= number_to_percentage((rate = block_info.looked_up_rate) ? rate * 100 : 0, precision: 2, strip_insignidicant_zeros: true) %></td>
+  <td><%= block_info.deletable? ? "✔" : "✘" %></td>
+</tr>
